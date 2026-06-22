@@ -22,7 +22,7 @@ repositories {
 
 dependencies {
     minecraft("com.mojang:minecraft:${property("minecraft_version")}")
-    mappings(loom.layered {})
+    mappings(loom.noMappings())
     modImplementation("net.fabricmc:fabric-loader:${property("fabric_loader_version")}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
     include(implementation("io.github.spair:imgui-java-binding:${property("imgui_version")}")!!)
