@@ -17,17 +17,16 @@ java {
 repositories {
     mavenCentral()
     maven("https://maven.fabricmc.net/")
-    maven("https://raw.githubusercontent.com/SpaiR/imgui-java/master/bindingLibs/")
+    maven("https://maven.spair.dev/releases")
 }
 
 dependencies {
     minecraft("com.mojang:minecraft:${property("minecraft_version")}")
-    mappings("net.fabricmc:mapping-bundle:${property("minecraft_version")}+build.1")
+    mappings(loom.officialMojangMappings())
     modImplementation("net.fabricmc:fabric-loader:${property("fabric_loader_version")}")
-    implementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
-    implementation("io.github.spair:imgui-java-binding:${property("imgui_version")}")
-    implementation("io.github.spair:imgui-java-natives-linux:${property("imgui_version")}")
-    implementation("io.github.spair:imgui-java-app:${property("imgui_version")}")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_api_version")}")
+    include(implementation("io.github.spair:imgui-java-binding:${property("imgui_version")}")!!)
+    include(implementation("io.github.spair:imgui-java-natives-linux:${property("imgui_version")}")!!)
 }
 
 tasks.processResources {
