@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "${mod_id}",
+  "id": "imguitest",
   "version": "${version}",
-  "name": "${mod_name}",
-  "description": "ImGui overlay for Minecraft 26.2",
+  "name": "ImGuiTest",
+  "description": "ImGui test mod for Minecraft 26.2",
   "authors": ["you"],
   "license": "MIT",
   "environment": "client",
@@ -13,7 +13,8 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=${fabric_loader_version}",
-    "minecraft": "26.2"
+    "fabricloader": ">=0.19.3",
+    "minecraft": "26.2",
+    "imguimc": ">=2.0.1"
   }
 }
