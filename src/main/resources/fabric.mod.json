@@ -8,13 +8,11 @@
   "license": "MIT",
   "environment": "client",
   "entrypoints": {
-    "client": [
-      "dev.imguitest.ImGuiTestMod"
-    ]
+    "client": ["dev.imguitest.ImGuiTestMod"]
   },
   "depends": {
     "fabricloader": ">=0.19.3",
-    "minecraft": "26.2",
-    "imguimc": ">=2.0.1"
+    "minecraft": ">=26.2 <26.3",
+    "imguimc": "*"
   }
 }

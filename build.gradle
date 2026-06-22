@@ -6,17 +6,7 @@ plugins {
 version = project.mod_version
 group = project.maven_group
 
-repositories {
-    exclusiveContent {
-        forRepository {
-            maven {
-                name = "Modrinth"
-                url = "https://api.modrinth.com/maven"
-            }
-        }
-        filter { includeGroup "maven.modrinth" }
-    }
-}
+repositories {}
 
 loom {
     splitEnvironmentSourceSets()
@@ -32,7 +22,7 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    implementation "maven.modrinth:imguimc:2.0.1-fabric-26.2"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 processResources {
